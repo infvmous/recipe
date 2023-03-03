@@ -140,6 +140,9 @@ body{
 
   */
 
+
+ 
+
   .output{
 text-align: center;
 display: flex; 
@@ -158,12 +161,26 @@ position: relative;
 
 .meal-result{
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    row-gap: 10px;
    gap: 15px;
    z-index: 10;
    position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  .meal-result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .meal-result  {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .meal{
     display: flex;
@@ -229,6 +246,18 @@ position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
    }
+
+   @media screen and (max-width: 768px) {
+    .recipe{ 
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .recipe{ 
+      width: 400px;
+    }
+  }
 
    .res-container{
     z-index: 999;
