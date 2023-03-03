@@ -11,6 +11,7 @@ body{
     background-color: #F7F1E5;
     color: black;
     overflow-x: hidden !important;
+    font-size: 16px;
 }
 
 .nav{
@@ -81,24 +82,13 @@ input::placeholder {
   color: #171616;
 }
 
-@media screen and (max-width: 768px) {
-  .search-box form {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-  }
-
-  .search-box input[type="text"] {
-    width: 80%;
-    margin-right: 0;
-  }
-}
 
 .search-box input:hover{
     background-color: #f4c22d89;
 }
 
 .search-box #search-btn {
+  font-size: 15px;
   color: black;
   padding: 10px;
     border-bottom-left-radius: 0;
@@ -195,18 +185,6 @@ position: relative;
    position: relative;
 }
 
-@media screen and (max-width: 768px) {
-  .meal-result {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .meal-result  {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 
 .meal{
@@ -274,18 +252,7 @@ position: relative;
     overflow-y: scroll;
    }
 
-   @media screen and (max-width: 768px) {
-    .recipe{ 
-      width: 500px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .recipe{ 
-      width: 400px;
-    }
-  }
-
+ 
    .res-container{
     z-index: 999;
     display: flex;
@@ -361,8 +328,8 @@ position: relative;
 
   .close-btn{
     position: absolute;
-    right: 0;
-    padding:0px  10px 0px 0px;
+    top: 0;
+   padding-top: 5px;
   }
 
   .fa-circle-xmark{
@@ -399,4 +366,50 @@ position: relative;
 
   .area{
     font-weight: 800;
+  }
+
+  /* media queries */
+
+   /* media queries recipes */
+  @media screen and (max-width: 768px) {
+    .recipe{ 
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .recipe{ 
+      width: 400px;
+    }
+  }
+
+
+ /* media queries  meal results*/
+  @media screen and (max-width: 768px) {
+    .meal-result {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .meal-result  {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+   /* media queries  form*/
+
+  @media screen and (max-width: 768px) {
+    .search-box form {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+    }
+  
+    .search-box input[type="text"] {
+      width: 80%;
+      margin-right: 0;
+      font-size: 15px;
+    }
   }
