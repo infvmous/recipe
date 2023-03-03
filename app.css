@@ -9,6 +9,8 @@ a{
 
 body{
     background-color: #F7F1E5;
+    color: black;
+    overflow-x: hidden !important;
 }
 
 .nav{
@@ -48,32 +50,51 @@ body{
 }
 
 .search-box{
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.search-box input{
-    width: 100%;
-    max-width: 500px;
-    padding: 12px;
-    border-right: none;
-    border-radius: 5px;
+.search-box form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box input[type="text"]{
+  width:80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border: 1px solid transparent;
     background-color: #F0A04B;
     box-shadow: rgba(211, 152, 13, 0.3) 0px 1px 2px 0px, rgba(223, 173, 9, 0.15) 0px 2px 6px 2px;
-    border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+  .search-box form {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-box input[type="text"] {
+    width: 80%;
+    margin-right: 0;
+  }
 }
 
 .search-box input:hover{
     background-color: #f4c22d89;
 }
 
-#search-btn{
-    padding: 12px 20px;
+.search-box #search-btn {
+  padding: 10px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0px;
     border-radius: 5px;
