@@ -64,6 +64,7 @@ body{
 }
 
 .search-box input[type="text"]{
+  color: black;
   width:80%;
   padding: 10px;
   border-radius: 5px;
@@ -94,6 +95,7 @@ body{
 }
 
 .search-box #search-btn {
+  color: black;
   padding: 10px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0px;
